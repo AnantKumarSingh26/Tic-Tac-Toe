@@ -134,6 +134,15 @@ nav ul {
 #reset:active {
   transform: translateY(0);
 }
+.game_over{
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  color: red;
+  text-align: center;
+  font-weight: 900;
+  border: 2px solid white;
+}
 
 /* --- Responsiveness --- */
 @media screen and (max-width: 950px) {
