@@ -1,24 +1,37 @@
-let turn ="X"
+const cells = document.querySelectorAll('.cell');
+const statusText = document.querySelector("#statusText")
+const restartBtn = document.querySelector("#restartBtn");
+const win =[
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+];
 
-const changeTurn =()=>{
+let options = ["","","","","","","","",""];
+let currentPlayer ='X'
+let running= false;
+initializeGame();
 
-    return turn === "X"?"O":"X"
+function initializeGame(){
+    cells.forEach(cell=>cell.addEventListener("click",cellClicked))
+    restartBtn.addEventListener("click",restartGame);
+    statusText.textContent =  `${currentPlayer}'s turn`
 }
 
-const checkWin=()=>{
+function cellClicked(){
+    const cellIndex = this.getAttribute("cellIndex")
+}
+function updateCell(){
 
 }
+function changePlayer(){
 
-let boxes = document.getElementsByClassName("box");
-Array.from(boxes).forEach(element => {
-    let boxtext = document.querySelector('.boxtext');
-    element.addEventListener('click',(e)=>{
-        if(boxtext,innerText= ''){
-            boxtext.innerText=turn;
-            changeTurn();
-            //audioPlay
-            checkWin();
-            document.getElementsByClassName("info")[0].innerText = 'Turn for '+turn
-        }
-    })
-});
+}
+function restartGame(){
+
+}
