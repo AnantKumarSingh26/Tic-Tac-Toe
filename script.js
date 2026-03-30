@@ -43,7 +43,7 @@ const checkWin = () => {
             document.querySelector(".info").innerHTML =
                 boxtexts[e[0]].innerHTML + " Won!";
             container.style.opacity = "0.5";
-            container.style.backgroundColor = "rgb(33, 54, 69)";
+            container.style.backgroundColor = "rgb(59, 66, 72)";
 
             // Create a new div
             const gameOverDiv = document.createElement("div");
